@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Hikennn/ohmyfood-openclassrooms/issues"
   },
-  "homepage": "https://github.com/Hikennn/ohmyfood-openclassrooms#readme"
+  "homepage": "https://github.com/Hikennn/ohmyfood-openclassrooms#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1"
+  }
 }
