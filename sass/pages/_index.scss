@@ -1,9 +1,62 @@
-.localisation{
+.location{
+    @include centered;
     background-color: #EAEAEA;
     color: #4B4B4B;
     font-weight: bold;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &__icon{
+        margin-right: 10px;
+    }
+}
+
+.about{
+    &__explore{
+        @include centered;
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 10px;
+        background-color: #F6F6F6;
+    }
+    &__explore p{
+        color: #353535;
+        margin: 10px 0px 20px 0px;
+    }
+
+    &__usage{
+        padding: 45px 10px;
+        &--step{
+            background-color: #F6F6F6;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 20px 10px 20px;
+            font-weight: bold;
+            border-radius: 20px;
+            @include shadow;
+            margin: 20px 10px 10px 20px;
+            counter-increment: step-count;
+            @media screen and (min-width: 768px){
+                display: flex;
+                justify-content: space-evenly;
+                margin: 20px 150px;
+            }
+            &.pink{
+                background-color: #F5EDFF;
+            }
+            &::before{
+                content: counter(step-count) " ";
+                color: white;
+                background-color: $color-primary;
+                padding: 5px 10px;
+                border-radius: 50%;
+                margin-left: -70px;
+            }
+        }
+        &--step-icon{
+            font-size: 20px;
+            color: #7E7E7E;
+            &.pink{
+                color: $color-primary;
+            }
+        }
+    }
 }
