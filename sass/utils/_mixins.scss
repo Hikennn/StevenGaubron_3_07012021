@@ -23,3 +23,27 @@
         background: linear-gradient(-5deg, lighten($color-primary, 3%), lighten($color-secondary, 3%));
     }
 }
+
+@mixin card {
+    .restaurant__cards-container{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px;
+    }
+    .restaurant__card{
+        width: 410px;
+        margin: 20px;
+        border-radius: 30px;
+        &--image{
+            object-fit: cover;
+            height: 150px;
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+        }
+        &--infos{
+            padding: 15px;
+            border-radius: 0px 0px 15px 15px;
+            @include shadow;
+        }
+    }
+}

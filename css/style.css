@@ -10,6 +10,11 @@ body, html {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -109,6 +114,52 @@ h1 {
 }
 .about__usage--step-icon.pink {
   color: #9356DC;
+}
+
+.restaurant {
+  background-color: #F6F6F6;
+}
+
+.restaurant h2 {
+  padding: 50px 0px 0px 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .restaurant__cards-container {
+    padding: 0px 150px;
+  }
+}
+
+.restaurant__card {
+  margin: 20px;
+}
+.restaurant__card .restaurant__cards-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.restaurant__card .restaurant__card {
+  width: 410px;
+  margin: 20px;
+  border-radius: 30px;
+}
+.restaurant__card .restaurant__card--image {
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurant__card .restaurant__card--infos {
+  padding: 15px;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 10px 23px -10px rgba(0, 0, 0, 0.63);
+}
+.restaurant__card--infos {
+  display: flex;
+  justify-content: space-between;
+}
+.restaurant__card--favoris {
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

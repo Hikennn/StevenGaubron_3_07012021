@@ -15,7 +15,7 @@
         flex-direction: column;
         text-align: center;
         padding: 45px 10px;
-        background-color: #F6F6F6;
+        background-color: $color-background;
     }
     &__explore p{
         color: #353535;
@@ -25,7 +25,7 @@
     &__usage{
         padding: 45px 10px;
         &--step{
-            background-color: #F6F6F6;
+            background-color: $color-background;
             display: flex;
             justify-content: space-evenly;
             padding: 20px 20px 10px 20px;
@@ -58,5 +58,28 @@
                 color: $color-primary;
             }
         }
+    }
+}
+
+.restaurant{
+    background-color: $color-background;
+}
+.restaurant h2{
+    padding: 50px 0px 0px 10px;
+}
+.restaurant__cards-container{
+    @media screen and (min-width: 1200px){
+        padding: 0px 150px;
+    }
+}
+.restaurant__card{
+    @include card;
+    margin: 20px;
+    &--infos{
+        display: flex;
+        justify-content: space-between;
+    }
+    &--favoris{
+        font-size: 25px;
     }
 }
