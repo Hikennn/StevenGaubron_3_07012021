@@ -3,6 +3,7 @@
     background-color: #EAEAEA;
     color: #4B4B4B;
     font-weight: bold;
+    padding: 20px;
     height: 30px;
     &__icon{
         margin-right: 10px;
@@ -75,6 +76,9 @@
 .restaurant__card{
     @include card;
     margin: 20px;
+    &--images{
+        position: relative;
+    }
     &--infos{
         display: flex;
         justify-content: space-between;
@@ -82,4 +86,9 @@
     &--favoris{
         font-size: 25px;
     }
+}
+.tag{
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }

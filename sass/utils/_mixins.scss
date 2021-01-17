@@ -24,6 +24,16 @@
     }
 }
 
+@mixin tag {
+    color: #008766;
+    background-color: #99E2D0;
+    font-weight: bold;
+    font-size: .9rem;
+    border-radius: 3px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
 @mixin card {
     .restaurant__cards-container{
         display: flex;

@@ -39,6 +39,16 @@ h1 {
   background: linear-gradient(-5deg, #9b63df, #ff88de);
 }
 
+.tag {
+  color: #008766;
+  background-color: #99E2D0;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -50,6 +60,46 @@ h1 {
   z-index: 1;
 }
 
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 20px;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    text-align: center;
+  }
+  .footer__links ul {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__links li {
+    margin-right: 20px;
+  }
+}
+.footer__links li {
+  margin-bottom: 5px;
+}
+.footer__links li:hover {
+  text-decoration: underline;
+}
+.footer__title {
+  font-family: "Shrikhand", sans-serif;
+  margin-bottom: 20px;
+}
+.footer__links--icon {
+  margin-right: 1rem;
+}
+.footer__links--icon.hand {
+  margin-right: 0.5rem;
+}
+.footer a {
+  color: white;
+}
+.footer li {
+  list-style-type: none;
+}
+
 .location {
   display: flex;
   justify-content: center;
@@ -57,6 +107,7 @@ h1 {
   background-color: #EAEAEA;
   color: #4B4B4B;
   font-weight: bold;
+  padding: 20px;
   height: 30px;
 }
 .location__icon {
@@ -154,12 +205,21 @@ h1 {
   border-radius: 0px 0px 15px 15px;
   box-shadow: 0px 10px 23px -10px rgba(0, 0, 0, 0.63);
 }
+.restaurant__card--images {
+  position: relative;
+}
 .restaurant__card--infos {
   display: flex;
   justify-content: space-between;
 }
 .restaurant__card--favoris {
   font-size: 25px;
+}
+
+.tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
