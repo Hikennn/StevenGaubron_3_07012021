@@ -74,7 +74,7 @@
     }
 }
 .restaurant__card{
-    @include card;
+    @include restaurant-card;
     margin: 20px;
     &--images{
         position: relative;
