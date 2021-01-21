@@ -108,6 +108,54 @@ h1 {
   list-style-type: none;
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  opacity: 0;
+  color: transparent;
+  position: fixed;
+  background-color: white;
+  animation: bg 2.5s;
+}
+
+h1 {
+  position: relative;
+  font-size: 3rem;
+  -webkit-text-stroke: 1px #FF79DA;
+}
+h1::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "ohmyfood";
+  color: #9356DC;
+  overflow: hidden;
+  animation: load 2.5s linear;
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+    z-index: 10;
+  }
+  100% {
+    width: 105%;
+    z-index: -1;
+  }
+}
+@keyframes bg {
+  0%, 99% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 .location {
   display: flex;
   justify-content: center;
@@ -130,6 +178,11 @@ h1 {
   text-align: center;
   padding: 45px 10px;
   background-color: #F6F6F6;
+}
+.about__exploreh2 {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: sans;
+  color: yellow;
 }
 .about__explore p {
   color: #353535;
