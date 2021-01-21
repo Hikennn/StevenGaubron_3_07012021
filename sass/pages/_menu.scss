@@ -9,6 +9,16 @@
         object-fit: cover;
     }
 }
+.expect{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    @media screen and (min-width: 768px){
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+    }
+}
 
 .menu{
     background-color: white;
