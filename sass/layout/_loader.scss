@@ -5,12 +5,13 @@
     min-height: 100vh;
     min-width: 100%;
     opacity: 0;
+    z-index: -10;
     color: transparent;
     position: fixed;
     background-color: white;
-    animation: bg 2.5s;
+    animation: bg 1.5s;
 }
-h1{
+.loader h1{
     position: relative;
     font-size: 3rem;
     -webkit-text-stroke: 1px $color-secondary;
@@ -21,7 +22,7 @@ h1{
         content: "ohmyfood";
         color: $color-primary;
         overflow: hidden;
-        animation: load 2.5s linear;
+        animation: load 1.5s linear;
     }
 }
 
@@ -31,7 +32,7 @@ h1{
         z-index: 10;
     }
     100%{
-        width: 105%;
+        width: 100%;
         z-index: -1;
     }
 }

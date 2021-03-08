@@ -30,6 +30,16 @@
 
     &__usage{
         padding: 45px 10px;
+        @media screen and (min-width: 1200px){
+            ol{
+                display: flex;
+                justify-content: center;
+            }
+            li{
+                margin-right: 30px;
+                width: 100%;
+            }
+        }
         &--step{
             background-color: $color-background;
             display: flex;
@@ -76,6 +86,12 @@
 .restaurant__cards-container{
     @media screen and (min-width: 1200px){
         padding: 0px 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .restaurant__card{
+            max-width: 500px;
+        }
     }
 }
 .restaurant__card{
@@ -90,6 +106,18 @@
     }
     &--favoris{
         font-size: 25px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px black;
+        background-size: 25px 25px;
+        -webkit-background-clip: text;
+        background-position: 0 -25px;
+        &:hover{
+            background-image: -webkit-linear-gradient(-5deg, $color-primary, $color-secondary);
+            animation: favoris .4s;
+            animation-fill-mode: both;
+            animation-timing-function: ease-in-out;
+            cursor: pointer;
+        }
     }
 }
 .tag{
@@ -97,3 +125,14 @@
     top: 15px;
     right: 15px;
 }
+
+@keyframes favoris {
+	0% {
+		transform: scale(0.7);
+        opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+        opacity: 1;
+	}
+}  

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -30,6 +31,7 @@ h1 {
   border-radius: 21px;
   font-size: 14px;
   background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  outline: none;
   box-shadow: 0px 10px 23px -10px rgba(0, 0, 0, 0.63);
   border: none;
   cursor: pointer;
@@ -115,25 +117,26 @@ h1 {
   min-height: 100vh;
   min-width: 100%;
   opacity: 0;
+  z-index: -10;
   color: transparent;
   position: fixed;
   background-color: white;
-  animation: bg 2.5s;
+  animation: bg 1.5s;
 }
 
-h1 {
+.loader h1 {
   position: relative;
   font-size: 3rem;
   -webkit-text-stroke: 1px #FF79DA;
 }
-h1::before {
+.loader h1::before {
   position: absolute;
   top: 0;
   left: 0;
   content: "ohmyfood";
   color: #9356DC;
   overflow: hidden;
-  animation: load 2.5s linear;
+  animation: load 1.5s linear;
 }
 
 @keyframes load {
@@ -142,7 +145,7 @@ h1::before {
     z-index: 10;
   }
   100% {
-    width: 105%;
+    width: 100%;
     z-index: -1;
   }
 }
@@ -190,6 +193,16 @@ h1::before {
 }
 .about__usage {
   padding: 45px 10px;
+}
+@media screen and (min-width: 1200px) {
+  .about__usage ol {
+    display: flex;
+    justify-content: center;
+  }
+  .about__usage li {
+    margin-right: 30px;
+    width: 100%;
+  }
 }
 .about__usage--step {
   background-color: #F6F6F6;
@@ -239,6 +252,12 @@ h1::before {
 @media screen and (min-width: 1200px) {
   .restaurant__cards-container {
     padding: 0px 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurant__cards-container .restaurant__card {
+    max-width: 500px;
   }
 }
 
@@ -275,6 +294,18 @@ h1::before {
 }
 .restaurant__card--favoris {
   font-size: 25px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  background-size: 25px 25px;
+  -webkit-background-clip: text;
+  background-position: 0 -25px;
+}
+.restaurant__card--favoris:hover {
+  background-image: -webkit-linear-gradient(-5deg, #9356DC, #FF79DA);
+  animation: favoris 0.4s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
 }
 
 .tag {
@@ -283,6 +314,16 @@ h1::before {
   right: 15px;
 }
 
+@keyframes favoris {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .banner__image {
   width: 100%;
   height: auto;
@@ -329,6 +370,18 @@ h1::before {
 }
 .menu__title--icon {
   font-size: 25px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  background-size: 25px 25px;
+  -webkit-background-clip: text;
+  background-position: 0 -25px;
+}
+.menu__title--icon:hover {
+  background-image: -webkit-linear-gradient(-5deg, #9356DC, #FF79DA);
+  animation: favoris 0.4s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
 }
 .menu__container {
   padding: 0px 20px;
@@ -347,10 +400,14 @@ h1::before {
 }
 
 .menu__card {
+  position: relative;
   margin-top: 15px;
   padding: 10px 20px 10px 10px;
   border-radius: 10px;
   box-shadow: -1px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  animation: menuAppearance 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__card--description {
   display: flex;
@@ -359,6 +416,41 @@ h1::before {
 .menu__card .price {
   font-weight: bold;
   color: #353535;
+}
+.menu__card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  border-radius: 0px 10px 10px 0px;
+  background: #99E2D0;
+  transition: all 0.35s;
+}
+.menu__card:hover::before {
+  width: 70px;
+}
+
+.delay-1 {
+  animation: menuAppearance 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation: menuAppearance 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation: menuAppearance 0.6s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-delay: 0.6s;
 }
 
 .command {
@@ -370,6 +462,27 @@ h1::before {
 .command-button {
   display: flex;
   justify-content: center;
+}
+
+@keyframes menuAppearance {
+  0% {
+    margin-top: 25px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 15px;
+    opacity: 1;
+  }
+}
+@keyframes favoris {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
