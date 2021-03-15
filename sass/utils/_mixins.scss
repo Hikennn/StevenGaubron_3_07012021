@@ -66,17 +66,17 @@
 }
 
 @mixin menu-card{
-    position: relative;
     margin-top: 15px;
-    padding: 10px 20px 10px 10px;
+    //padding: 10px 20px 10px 10px;
     border-radius: 10px;
     box-shadow: -1px 0px 15px -8px rgba(0,0,0,0.75);
-    &--description{
-        display: flex;
-        justify-content: space-between;
+    /*&--description{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden
     }
     .price{
         font-weight: bold;
         color: #353535;
-    }
+    }*/
 }

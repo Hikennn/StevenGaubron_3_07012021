@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -96,6 +95,7 @@ h1 {
 .footer__title {
   font-family: "Shrikhand", sans-serif;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 .footer__links--icon {
   margin-right: 1rem;
@@ -205,12 +205,13 @@ h1 {
   }
 }
 .about__usage--step {
+  position: relative;
   background-color: #F6F6F6;
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 20px 10px 20px;
+  padding: 30px;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 30px;
   box-shadow: 0px 10px 23px -10px rgba(0, 0, 0, 0.63);
   margin: 20px 10px 10px 20px;
   counter-increment: step-count;
@@ -231,7 +232,10 @@ h1 {
   background-color: #9356DC;
   padding: 5px 10px;
   border-radius: 50%;
-  margin-left: -70px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
 }
 .about__usage--step-icon {
   font-size: 20px;
@@ -399,36 +403,57 @@ h1 {
   margin-top: 5px;
 }
 
-.menu__card {
-  position: relative;
+body .menu__card {
   margin-top: 15px;
-  padding: 10px 20px 10px 10px;
   border-radius: 10px;
   box-shadow: -1px 0px 15px -8px rgba(0, 0, 0, 0.75);
+  /*&--description{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden
+  }
+  .price{
+      font-weight: bold;
+      color: #353535;
+  }*/
   animation: menuAppearance 0.6s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
-}
-.menu__card--description {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
-.menu__card .price {
+body .menu__card--description {
+  width: 70%;
+  margin: 15px;
+}
+body .menu__card--description h3, body .menu__card--description p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body .menu__card--price {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  margin-right: -30px;
   font-weight: bold;
   color: #353535;
 }
-.menu__card::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
+body .menu__card--check {
+  color: white;
   width: 0px;
   height: 100%;
   border-radius: 0px 10px 10px 0px;
   background: #99E2D0;
-  transition: all 0.35s;
 }
-.menu__card:hover::before {
+body .menu__card--check--icon {
+  padding: 29px;
+}
+body .menu__card:hover {
+  cursor: pointer;
+}
+body .menu__card:hover .menu__card--check {
   width: 70px;
 }
 
@@ -454,7 +479,7 @@ h1 {
 }
 
 .command {
-  padding: 12px 35px;
+  padding: 15px 40px;
   margin-top: 40px;
   margin-bottom: 10px;
 }
