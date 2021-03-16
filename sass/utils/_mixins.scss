@@ -66,17 +66,50 @@
 }
 
 @mixin menu-card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-shrink: 2;
+    font-size: 0.9rem;
     margin-top: 15px;
-    //padding: 10px 20px 10px 10px;
     border-radius: 10px;
     box-shadow: -1px 0px 15px -8px rgba(0,0,0,0.75);
-    /*&--description{
+    &--description{
+        width: 80%;
+        margin: 15px;
         white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
-        overflow: hidden
+        & h3, p{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
-    .price{
+    &--price{
+        margin-top: 35px;
         font-weight: bold;
         color: #353535;
-    }*/
+    }
+    &--check{
+        color: white;
+        width: 0px;
+        height: 100%;
+        margin-left: 20px;
+        padding: 22px 0px 22px 0px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 0px 10px 10px 0px;
+        background: $color-tertiary;
+        transition-duration: 0.5s;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover .menu__card--check{
+        width: 100px;
+    }
+    &:hover .menu__card--check--icon{
+        animation: checkSpin 0.6s;
+    }
 }

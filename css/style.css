@@ -404,28 +404,24 @@ h1 {
 }
 
 body .menu__card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-shrink: 2;
+  font-size: 0.9rem;
   margin-top: 15px;
   border-radius: 10px;
   box-shadow: -1px 0px 15px -8px rgba(0, 0, 0, 0.75);
-  /*&--description{
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden
-  }
-  .price{
-      font-weight: bold;
-      color: #353535;
-  }*/
   animation: menuAppearance 0.6s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 body .menu__card--description {
-  width: 70%;
+  width: 80%;
   margin: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 body .menu__card--description h3, body .menu__card--description p {
   white-space: nowrap;
@@ -433,10 +429,7 @@ body .menu__card--description h3, body .menu__card--description p {
   text-overflow: ellipsis;
 }
 body .menu__card--price {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 15px;
-  margin-right: -30px;
+  margin-top: 35px;
   font-weight: bold;
   color: #353535;
 }
@@ -444,17 +437,22 @@ body .menu__card--check {
   color: white;
   width: 0px;
   height: 100%;
+  margin-left: 20px;
+  padding: 22px 0px 22px 0px;
+  text-align: center;
+  font-size: 20px;
   border-radius: 0px 10px 10px 0px;
   background: #99E2D0;
-}
-body .menu__card--check--icon {
-  padding: 29px;
+  transition-duration: 0.5s;
 }
 body .menu__card:hover {
   cursor: pointer;
 }
 body .menu__card:hover .menu__card--check {
-  width: 70px;
+  width: 100px;
+}
+body .menu__card:hover .menu__card--check--icon {
+  animation: checkSpin 0.6s;
 }
 
 .delay-1 {
@@ -507,6 +505,14 @@ body .menu__card:hover .menu__card--check {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes checkSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
