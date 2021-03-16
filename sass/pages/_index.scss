@@ -36,7 +36,7 @@
                 justify-content: center;
             }
             li{
-                margin-right: 30px;
+                margin: 0px 50px;
                 width: 100%;
             }
         }
@@ -88,13 +88,24 @@
     padding: 50px 0px 0px 10px;
 }
 .restaurant__cards-container{
-    @media screen and (min-width: 1200px){
-        padding: 0px 150px;
+    @media screen and (min-width: 1200px) and (max-width: 1599px){
+        padding: 0px 30px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
+        width: 100%;
         .restaurant__card{
-            max-width: 500px;
+            width: 500px;
+        }
+    }
+    @media screen and (min-width: 1600px) {
+        padding: 0px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        .restaurant__card{
+            width: 600px;
         }
     }
 }
