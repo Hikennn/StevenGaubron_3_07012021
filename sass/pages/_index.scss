@@ -121,6 +121,12 @@
     }
     &--favoris{
         font-size: 25px;
+
+
+        margin-top: 6px;
+        margin-right: 10px;
+
+
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke: 1px black;
         background-size: 25px 25px;
@@ -139,15 +145,4 @@
     position: absolute;
     top: 15px;
     right: 15px;
-}
-
-@keyframes favoris {
-	0% {
-		transform: scale(0.7);
-        opacity: 0;
-	}
-	100% {
-		transform: scale(1);
-        opacity: 1;
-	}
-}  
+} 

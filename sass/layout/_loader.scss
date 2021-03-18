@@ -25,25 +25,3 @@
         animation: load 1.5s linear;
     }
 }
-
-@keyframes load{
-    0%{
-        width: 0%;
-        z-index: 10;
-    }
-    100%{
-        width: 100%;
-        z-index: -1;
-    }
-}
-
-@keyframes bg{
-    0%,99%{
-        opacity: 1;
-        z-index: 10;
-    }
-    100%{
-        opacity: 0;
-        z-index: -1;
-    }
-}
